@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/* 
+  Fallback for variables if @theme fails or for JS access 
+  We define them as standard CSS vars 
+*/
+:root {
+  --background: #020617;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 12s linear infinite;
+}
+
+@keyframes border-beam {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.animate-border-beam {
+  animation: border-beam calc(var(--duration)*1s) infinite linear;
+}
+
+.bg-radial-gradient-vignette {
+  background: radial-gradient(circle, transparent 40%, #020617 100%);
+}
+
+.stroke-text {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+.stroke-text-red {
+  -webkit-text-stroke: 2px rgba(239, 68, 68, 0.5);
+  /* Red-500 */
+  color: transparent;
+}
