@@ -77,7 +77,7 @@ When a violation is detected, the exam is immediately **PAUSED** with a dramatic
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/hackVision.git
+git clone https://github.com/Xombi17/hackVision.git
 cd hackVision
 ```
 
